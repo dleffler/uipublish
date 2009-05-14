@@ -1,0 +1,68 @@
+body {
+	font-family: 		Arial, Helvetica, sans-serif;
+	background-color: 	#ffffff;
+        color:                  #000000;
+	}
+
+p, td, ol, blockquote {
+	font-family: 		Arial, Helvetica, sans-serif;
+	}
+h1      {
+	font-family   : Arial, Helvetica, sans-serif;
+	font-size     : 150%;
+        color         : #666666;
+        }
+h2      {
+	font-family   : Arial, Helvetica, sans-serif;
+	font-size     : 130%;
+        color         : #666666;
+        }
+h3      {
+	font-family   : Arial, Helvetica, sans-serif;
+	font-size     : 120%;
+        color         : #666666;
+        }
+
+.button {
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #dddddd;
+ 	color: #000000;
+	text-decoration: none;
+	padding: 2px;
+        border-top   : 2px solid #ffffff; 
+        border-right : 2px solid #666666;
+        border-bottom: 2px solid #666666;
+        border-left  : 2px solid #ffffff;
+}
+a.button:link    {  color: #666666}
+a.button:visited {  color: #666666}
+a.button:hover   {  color: #ff0000}
+a.button:active  {  
+	color: #ff0000;
+	background-color: #dddddd;
+        border-top   : 2px solid #666666; 
+        border-right : 2px solid #eeeeee;
+        border-bottom: 2px solid #eeeeee;
+        border-left  : 2px solid #666666;
+}
+.navbar {
+	font-family: Arial, Helvetica, sans-serif;
+        font-size: 80%;
+        background-color: #dddddd;
+        padding: 4px;
+        border-top   : 2px solid #eeeeee; 
+        border-right : 2px solid #cccccc;
+        border-bottom: 2px solid #cccccc;
+        border-left  : 2px solid #eeeeee;
+        margin-top   : 4px;
+}
+.navbarlink {
+	font-family     : Arial, Helvetica, sans-serif;
+        padding-right   : 5px;
+        padding-left    : 5px;
+        background-color: #eeeeee;
+	border          : 1px solid #cccccc;
+        text-decoration : none;
+}
+a.navbarlink:hover   {  background-color: #ffffff}

@@ -1,0 +1,300 @@
+# $Id: INSTALL.txt,v 1.12 2003/08/03 23:38:48 chavan Exp $
+
+
+
+			     UIPublish
+
+		   INSTALLATION AND CONFIGURATION
+
+
+* TABLE OF CONTENTS
+
+- System Requirements
+- Installation and Configuration
+  - Step 1: Extract Files
+  - Step 2: Install Files and Directories
+  - Step 3: Setup MySQL Database, User Account, and Create Database
+  - Step 4: Create UIPublish MySQL Tables
+  - Step 5: Configuration
+- Check Installation
+- Restrict Access To Control Panel
+- HTML Customization
+
+
+* SYSTEM REQUIREMENTS
+
+  - PHP (http://www.php.net)
+  - MySQL (http://www.mysql.com)
+  
+* OPTIONAL ENHANCEMENTS
+
+  - FCKeditor (http://www.fckeditor.net)
+  - PopCalendarXP (http://www.calendarxp.net)  
+  - Kae's File Manage (http://kfm.verens.com)
+  - Web Calendar (http://www.freshmeat.net/projects/web-calendar)
+  - Greybox (http://www.orangoo.com/labs/GreyBox)
+
+UIPublish should run whereever PHP, MySQL, and Apache are available. I
+have tested it on GNU/Linux and Microsoft Windows 2000 running PHP,
+MySQL and Apache. One user reported it runs on MacOSX.
+
+** Note for using UIPublish with PHP 4.2.0:
+
+Starting in PHP 4.2.0, the default configuration for
+"register_globals" is set to "off."  UIPublish uses "global post
+variables." The PHP documentation suggests that the default
+"register_globals" can be changed to "on" on a per directory basis by
+creating a ".htaccess" file containing the following line:
+
+  php_value register_globals 1
+
+This file needs to be placed at the root of your website so that this
+configuration applies to all UIPublish directories under it.
+
+
+* INSTALLATION AND CONFIGURATION
+
+(Note: "#" at the beginning of a line indicates a command or lines
+from a file)
+
+** STEP 1:  Extract Files
+
+Move the uipublish_xxxxx.tar.gz file to a temporary directory and
+uncompress and extract it.
+
+#    tar zxvf uipublish_xxxxx.tar.gz
+
+  (OR)
+
+#    gunzip uipublish_xxxxx.tar.gz
+#    tar xvf uipublish_xxxxx.tar.gz
+
+The file will uncompress/extract as a directory named uipublish_xxxxx. You
+will notice the following directories:
+
+uipublish_xxxxx
+|-- docs                  # Documentation
+|-- uipublish_admin       # Administration  
+|   |-- help              # Users' Guide
+|   `-- inc               
+`-- website               # Website Directories
+    |-- inc
+    |-- uical_section
+    |-- uipublish_files
+    `-- uipublish_section
+
+** STEP 2:  Install Files and Directories
+
+- Copy the "uipublish_admin" directory to a directory on your
+  website. This directory is used for managing the UIPublish
+  content. If you have already have a "control panel" or "admin"
+  directory for your website, you may want to copy "uipublish_admin"
+  to that directory. 
+
+- Copy the "inc" directory to the base of your website.
+
+- Copy  the mainlist*.php files in the "website" directory to the base of
+  your website.
+
+- Copy the "uipublish_section" directory to the base of your
+  website and give it whatever directory name you want. For example,
+  if you want a section for "News" you may want to name the
+  directory "news". Repeat this for additional article sections. The 
+  reason for copying this directory and not moving it is so that you 
+  have a copy of this directory if you need to set up new article 
+  sections in the future.
+
+- Copy the "uical_section" directory to the base of your
+  website and give it whatever directory name you want. For example,
+  if you want an event section for "Events" you may want to name the
+  directory "events". Repeat this for additional event sections and for 
+  the events section. The reason for copying this directory and not 
+  moving it is so that you have a copy of this directory if you need
+  to set up new event sections in the future.
+
+- If it doesn't exist, make a directory called "uipublish_files" (or
+  some other name) at the base of your website. This will be used to
+  store files such as images and HTML files that will be included by
+  items.
+
+For example here are the above steps as Unix commands:
+
+#    cp -R ~/temp/uipublish_xx/uipublish_admin ~/web/control/
+#    cp -R ~/temp/uipublish_xx/website/inc/ ~/web/
+#    cp -R ~/temp/uipublish_xx/mainlist*.php ~/web/
+#    cp -R ~/temp/uipublish_xx/website/uipublish_section/ ~/web/news
+#    cp -R ~/temp/uipublish_xx/website/uipublish_section/ ~/web/reports
+#    cp -R ~/temp/uipublish_xx/website/uical_section/ ~/web/calendar
+#    cp -R ~/temp/uipublish_xx/website/uical_section/ ~/web/workshops
+#    mkdir ~/web/uipublish_files
+
+Your website directories should look something like this:
+
+web
+|-- control                # Control Panel
+|   `uipublish_admin       # Administration  
+|    |-- help              # Users' Guide
+|    `-- inc               
+|-- inc
+|-- news                   # An article section
+|-- reports                # An article section
+|-- calendar               # An event section
+`-- workshops              # An event section
+
+
+** STEP 3:  Set Up MySQL Database, User Account, and Create Database
+
+UIPublish stores data in a MySQL database. The next step is ton create
+a database and user for UIPublish. You need to have adequate
+permissions to complete the following steps. If you already have a
+database and username setup then you can skip ahead to Step 4.  In the
+following example I have used "webdb" as the name of the database and
+"webuser" as the name of the database user. These values can be
+anything you want them to be. Just make the appropriate substitutions
+when entering these commands.
+
+
+#    mysql -u root -p
+
+- In MySQL do:
+
+#      use mysql
+#
+#      INSERT INTO db
+#      (Host,Db,User,Select_priv,Insert_priv,
+#      Update_priv,Delete_priv,Create_priv,Drop_priv)
+#      VALUES('localhost','webdb','webuser',
+#      'Y','Y','Y','Y','Y','Y');
+#
+#      INSERT INTO user (Host,User,Password)
+#      VALUES('localhost','webuser', password('yourpassword'));
+#
+#      exit
+
+
+- Reload MySQL Database Conditions
+
+#    mysqladmin -u root -p reload
+
+
+- Create MySQL Database
+
+#    mysqladmin -u root -p create webdb
+
+
+** STEP 4:  Create UIPublish MySQL Tables
+
+#    mysql -u webuser -p webdb < ~/temp/uipublish_xx/docs/uipublish.sql
+
+- This step will create the following two tables in the "webdb"
+database:
+
+  - UIPublish
+  - UIPublish_cal
+
+- Do the same for any remaining .sql files to update the database
+
+#    mysql -u webuser -p webdb < ~/temp/uipublish_xx/docs/uipublish-update.sql
+
+- This step adds necessary columns to the tables in the "webdb" database:
+
+** STEP 5:  Configuration
+
+The following files need to be configured:
+
+  - ~/web/control/uipublish_admin/inc/config.php
+  - ~/web/control/filemanager.php
+  - ~/web/inc/config.php
+  - ~/web/uipublish_section/section_id.php 
+    (repeat for all event and/or article sections)
+  - ~/web/mainlist-inc.php
+
+Information on how to configure these files is in comments within
+the files. 
+
+*** Optional
+
+If you want to use RSS and/or Javascript syndication these files many
+need to be configured
+  
+  - ~/web/uipublish_section/js.php  (psuedo rss-feed on a website)
+  - ~/web/uipublish_section/rss.php
+  - ~/web/uical_section/rss.php
+   
+    (Repeat for all event and/or article sections)
+
+
+* CHECK INSTALLATION
+
+At this point, UIPublish should be running on your website. To check
+visit the control panel, main list, and section lists. For example,
+the URLs you can test are:
+
+  - http://www.website.com/control/uipublish_admin/
+  - http://www.website.com/mainlist.php
+  - http://www.website.com/uipublish_section/
+
+If it is not working, try to troubleshoot with the help of the error
+messages and check the configuration files.
+
+
+* RESTRICT ACCESS TO CONTROL PANEL
+
+IMPORTANT: You should now restrict access to the Control Panel. This
+will prevent unauthorized people from changing the UIPublish-managed
+content on your website.This can be done using a ".htaccess" file on
+web servers running Apache. If you are not familiar with restricting
+access to web pages using ".htaccess" you can find a lot of
+information about this on the Web. Search for "restricting access
+using htaccess" or "authentication using "htaccess" with your
+favorite search engine. You may also wish to restrict directory
+listing of some or all directories.
+
+* HTML CUSTOMIZATION
+
+The following basic files are setup to display UIPublish content on
+the website:
+
+  http://www.website.com/mainlist.php  (Main Lists)
+  http://www.website.com/uipublish_section/index.php (Section List)
+  http://www.website.com/uipublish_section/item.php (Section Item)
+  http://www.website.com/uipublish_section/item1.php (RSS Section Item)  
+
+These are PHP files with minimun HTML and snippets of PHP code. You can
+modify the HTML in these files to get them to look like the rest of
+your website. You can change the filename of "mainlist.php" and
+"index.php" but do not change the name of the file "item.php".
+
+For example, the Section List Page will have:
+	        
+  At the top of the page:
+		      
+     	 <? include ("inc/list-inc.php"); ?>
+
+  Within the page:
+			        
+  	 <? echo $page_list; ?>      # A list of items
+				
+And the Item Page will have:
+				  
+  At the top of the page:
+
+     	 <? include ("inc/item-inc.php"); ?>
+				        
+  Within the page:
+    
+   <? echo $page_title; ?>     # Item Title
+	 <? echo $page_postdate; ?>  # Item Post/Event Date
+	 <? echo $page_summary; ?>   # Item Summary
+	 <? echo $page_content; ?>   # Item Content
+	 <? echo $page_link; ?>      # Item's related link
+	 <? echo $page_file; ?>      # Item's included file
+
+UIPublish content displayed on the website front-end uses Cascading
+Style Sheets (CSS). You can use these custom CSS to further refine the
+look of your website. Here are the CSS classes:
+
+  uip_listtitle        = Item Title
+  uip_listnav          = Page Navigator
+  uip_listnavlink      = Link within Page Navigator
+  uip_listpagenavlink  = Current page within Page Navigator

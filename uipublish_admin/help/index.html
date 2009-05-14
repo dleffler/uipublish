@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>       
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">  
+    <title>UIPublish Users Guide
+    </title>           
+    <meta name="author" content="A. Chavan">     
+    <style type="text/css">  h1 { color: rgb(102, 102, 102);    font-family: Arial,Helvetica,sans-serif;    margin-top: 10%;    margin-bottom: 10%;    }  h2 { font-family: Arial,Helvetica,sans-serif;    color: rgb(102, 102, 102);    margin-top: 5%;    text-transform: uppercase;    }  h3 { font-family: Arial,Helvetica,sans-serif;    color: rgb(102, 102, 102);    margin-top: 3%;    }  body { margin: 2% 5%;    font-family: Arial,Helvetica,sans-serif;    background-color: rgb(255, 255, 255);    }  h4 { font-family: Arial,Helvetica,sans-serif;    color: rgb(51, 51, 51);    font-style: italic;    }   
+    </style>
+    <!--mstheme--><link rel="stylesheet" type="text/css" href="../../../_themes/hhbc4/hhbc1110-28591.css"><meta name="Microsoft Theme" content="hhbc4 1110, default">
+</head>
+  <body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><h1>UIPublish User's Guide</h1>
+    <p><strong>Table of Contents</strong>
+      <br>
+    </p>
+    <ul>  <li>
+      <a href="#Introduction">Introduction</a></li>  
+      <ul>    <li>
+        <a href="#How_It_Works">How It Works</a>
+        <br>    </li>  
+      </ul>  <li>
+      <a href="#Getting_Started">Getting Started</a></li>  
+      <ul>    <li>
+        <a href="#UIPublish_Control_Panel">UIPublish Control Panel</a></li>    <li>
+        <a href="#Adding_A_New_Item">Adding a New Item</a></li>    <li>
+        <a href="#Manage_Section">Manage Section</a></li>    <li>
+        <a href="#Modify_an_Item">Modify an item</a></li>    <li>
+        <a href="#Delete_an_Item">Delete an Item</a></li>    <li>
+        <a href="#Advanced_Management">Advanced Management</a>      
+      <ul>    
+        <li><a href="#UIPublish_Control_Panel0">Control Panel</a></li>
+        <li><a href="#Expire_Date">Section</a></li>
+        <li><a href="#Copy_Item">Copy an Existing Item</a></li>
+        <li><a href="#Convert_Item">Copy an Event to an Article</a></li>
+      </ul>    </li>
+        <li>
+        <a href="#Options">Optional Features</a><ul>    
+          <li><a href="#WYSIWYG">WYSIWYG Editing</a></li>
+          <li><a href="#Calendar">Popup Calendar</a></li>
+          <li><a href="#Files">Advanced File Management</a></li>
+          <li><a href="#WebCalendar">WebCalendar Integration</a></li>
+      </ul>    </li>
+        <li>
+        <a href="#Using_The_File_Manager">Using The Built-In File Manager</a>
+        <br>    </li>  
+      </ul>  <li>
+      <a href="#Description_of_Options">Description of Options</a></li>     
+      <ul>    <li>
+        <a href="#Article_Sections">Article Sections</a></li>    
+        <ul>      <li>
+          <a href="#Title">Title</a></li>      <li>
+          <a href="#Publish_Date">Publish Date</a></li>      <li>
+          <a href="#Expire_Date">Expire Date</a></li>      <li>
+          <a href="#Approval">Post Status</a></li>      <li>
+          <a href="#Visibility">Front Page</a></li>      <li>
+          <a href="#Section">Section</a></li>      <li>
+          <a href="#Topic">Category</a>
+          <br>      </li>    
+          <li>
+          <a href="#Summary">Summary</a></li>      <li>
+          <a href="#Content">Content</a></li>      <li>
+          <a href="#Link_URL">Link URL</a></li>      <li>
+          <a href="#Include_File">Enclosure</a></li>          
+        </ul>    <li>
+        <a href="#Event_Sections">Event Sections</a></li>    
+        <ul>      <li>
+          <a href="#Start_Time">Start Time</a>
+          <br>      </li>
+          <li>
+          <a href="#Event_Date">Event Date</a>
+          <br>      </li>
+          <li>
+          <a href="#End_Time">End Time</a></li>
+          <li>
+          <a href="#End Date">End Date </a>      </li>    
+        </ul>  
+      </ul>
+    </ul><h2>
+      <a name="Introduction"></a>Introduction</h2>
+    <p>Welcome to the UIPublish Web Publishing System. (UIPublish).&nbsp; UIPublish enables you to easily publish and edit content on your website.&nbsp; This User's Guide is designed to get you started quickly and provides information on how to do common tasks such as adding, editing or deleting content.
+    </p>
+    <p>If you are eager to get started skip to "
+      <a href="#Getting_Started">Getting Started</a>". If you are interested in how UIPublish works, read on.
+      <br>
+    </p>
+    <p>
+      <em>Note: As UIPublish can be easily customized, your webmaster may have customized some options of UIPublish. The examples and images below may not exactly match your website's installation of UIPublish. Please ask your webmaster for details. 
+        <br>
+      </em>
+    </p><h3>
+      <a name="How_It_Works"></a>How It Works</h3>UIPublish is web-based system for managing dynamic content on a website. It is suitable for publishing articles, announcements, events, etc. It provides an administration interface for content managers and the front-end pages can be customized. The UIPublish system consists of three components.
+    <br>
+    <ul>  <li>A database back-end.
+      <br>  </li>  <li>A control panel for administration</li>  <li>The front-end display
+      <br>  </li>
+    </ul>
+    <p>At the core of the system is a database that stores all the content you will enter into the system. You can use the control panel to add, modify, schedule, or delete content from the system. The front-end display component displays "live" content on your website.
+      <br>
+    </p>
+    <p>Content is stored as an "item." There are two types of "items" -- "
+      <em>article items
+      </em>" and "
+      <em>event items
+      </em>". 
+      <em>Article items
+      </em> are for content such as news or press releases. In other words, items with a publication date.
+      <em>Event items
+      </em> are for content such as appointments, meetings, or workshops. In other words, items with an event date. 
+      <br>
+    </p>
+    <p>&nbsp;
+      <em>Article items
+      </em> with a publication date that matches today's date or earlier are displayed on the website. Lists of 
+      <em>article items
+      </em> are in 
+      <em>reverse chronological order
+      </em> which means that the latest or newest item is displayed first.
+      <br>
+    </p>
+    <p>&nbsp;
+      <em>Event items
+      </em>with an event date that&nbsp;matches today's date or is in the future, 
+    are displayed as an upcoming event. Lists of 
+      <em>event items
+      </em> are in 
+      <em>chronological order
+      </em> which means that the list begins with the first or next upcoming item. Past events can also be displayed. These are listed 
+      <em>
+      </em>in 
+      <em>reverse chronological order
+      </em> which means that the most recent past event is displayed at the top of the list.&nbsp; 
+      <br>
+    </p>
+    <p>Both types of items can be classified in to separate sections. For example, with UIPublish you can manage content in a "News" section as well as "Reports" section. Items can be listed on the main page of a website as well as a separate list for each section. Items can also be assigned a "Front 
+    Page&quot; setting so that only items set to display there will appear on the main page of the website. Each item has a title, summary, content, and event/post date. Each item can also 
+    be assigned a category, an expiration or end date, an external link or URL 
+    to be used in lieu of the content, and may contain an "attachment" to allow 
+    a &quot;PodCast&quot; of a file kept in a directory on the filesystem.&nbsp; Events 
+    may also include start and end times.&nbsp; For more information see "Description of Options".
+      <br>
+    </p>
+    <p>More detailed technical information about UIPublish is available at 
+      <a href="http://uipublish.sourceforge.net/">uipublish.sourceforge.net.</a>
+      <br>
+    </p><h2>
+      <a name="Getting_Started"></a>Getting Started</h2><h3>
+      <a name="UIPublish_Control_Panel"></a>UIPublish Control Panel</h3>
+    <p>To start using the UIPublish you will need to login to the UIPublish Control Panel. Depending on how it has been setup, you may need a username and password to access the control. You can get this information from your Webmaster. 
+      <br>
+    </p>
+    <p>
+      <a href="images/index.13.jpg">
+      <img border="1" src="images/index.13_small.jpg" xthumbnail-orig-image="images/index.13.jpg"></a></p>
+    <p>UIPublish has the ability to organize content into different sections. This is setup by the Webmaster during the installation of UIPublish. On the main page of the Control Panel you will see one or more sections listed. Select a section to which you want to add an item. You should now see the Manage page which enables you to add, modify, reschedule, or delete items within that section.  
+      <br>
+    </p>
+    <p>
+      <a href="images/index.14.jpg">
+      <img border="1" src="images/index.14_small.jpg" xthumbnail-orig-image="images/index.14.jpg"></a></p><h3>
+      <a name="Adding_A_New_Item"></a>Adding A New Item</h3>
+    <p>To add a new item, simply select the "<strong>ADD</strong>" button adjacent to the text, "Add a new Item". You will then see a page titled "Add New Item...." with a form.&nbsp; Fill out this form. 
+      <br>
+    </p>
+    <p>
+      <a href="images/index.15.jpg">
+      <img border="1" src="images/index.15_small.jpg" xthumbnail-orig-image="images/index.15.jpg"></a></p>
+    <p>All items flagged with a red 
+      <span style="color: rgb(255, 0, 0);">*
+      </span> 
+      <em>must
+      </em>be filled out completely in order for the form to process correctly.&nbsp; (For more information about the different options see "Description of Options."). Choose the default options for now. After you have filled out the form, choose the "<strong>Preview</strong>"
+      <br>
+    </p>
+    <p>
+      <a href="images/index.16.jpg">
+      <img border="1" src="images/index.16_small.jpg" xthumbnail-orig-image="images/index.16.jpg"></a></p>
+    <p>You should now see the preview page. This page is meant to enable you to preview the content you have entered. You can check the information you have entered for typos or other errors. If required information is missing you will be presented with a reminder to add the missing information. If all the required information has been filled out, you will see a button title&nbsp; "<strong>Submit</strong>."&nbsp; Select "<strong>Submit"</strong> to add the new item. If successful, you will see "Go back to the Manage Page." The information you entered is now added to the database but, depending on the options you have chosen, the item may or may not be displayed on the website. To check that you need to refer to the Manage Section page.
+      <br>
+    </p>
+    <p>
+      <a href="images/index.17.jpg">
+      <img border="1" src="images/index.17_small.jpg" xthumbnail-orig-image="images/index.17.jpg"></a></p><h3>
+      <a name="Manage_Section"></a>Manage Section
+      <br></h3>
+    <p>This page displays the items which have been entered into the system. Each item is listed in the table with a "<strong>Modify</strong>" button to its left and a "<strong>Delete</strong>" button to its right.&nbsp; The background color of the table cell for each item indicates which items are "active" or 
+    visible on the frontend. Items for which <em>Post Status </em>, 
+      <em>Post Date
+      </em>, and 
+      <em>Expire Date
+      </em>are green will be actually online or visible on the website. The others are in the system but are not displayed on the website. If your webmaster has configured your website&nbsp; to use the
+    <em>Front Page </em>options then items&nbsp; a dark blue square under 
+      <em>Post Status </em>will be displayed on the main page of the website. 
+      <br>
+    </p>
+    <p>
+      <a href="images/index.14.jpg">
+      <img border="1" src="images/index.14_small.jpg" xthumbnail-orig-image="images/index.14.jpg"></a></p>
+    <p>The item that you just added is not yet online because it's "<em>Post 
+    Status </em>" is set to "<em>Draft.
+      </em>" You can now modify the item to set the article's "<em>Post Status
+    </em>" setting to "<em>Publish </em>", (See "Modify an Item") By default all items are added with the 
+    post status set to " <em>Draft </em>" unless you specify otherwise.
+      <br>
+    </p><h3>
+      <a name="Modify_an_Item"></a>Modify an Item
+      <br></h3>
+    <p>To modify an item, select the "<strong>Modify</strong>" button next to the item you would like to change. This will take you to the Modify form page with fields that are filled in with the information corresponding to the item you are modifying. Change whatever information needs to be changed. If this is a
+    <em>Draft </em>item and you want to make it available online then change it's 
+    Post Status setting to " <em>Publish </em>."&nbsp; When you are finished, select the Preview button. If all the required information has been filled out, you will be presented with a preview page and the ability to 
+    Submit this information.&nbsp; Select Submit to apply the changes to the item.
+      <br>
+    </p>
+    <p>
+      <a href="images/index.18.jpg">
+      <img border="1" src="images/index.18_small.jpg" xthumbnail-orig-image="images/index.18.jpg"></a></p><h3>
+      <a name="Delete_an_Item"></a>Delete an Item</h3>
+    <p>Select the "<strong>Delete</strong>" button that is to the right of the item you wish to delete.&nbsp; On the next page, select the 
+      <em>Delete
+      </em> button shown.&nbsp; If you do not wish to delete the item at that time, select No, do not delete. 
+      <br>
+      <br>
+      <em>Warning: Deleted items cannot be restored.
+      </em> 
+      <br>
+    </p>
+    <p>
+      <a href="images/index.19.jpg">
+      <img border="1" src="images/index.19_small.jpg" xthumbnail-orig-image="images/index.19.jpg"></a></p><h2>
+      <a name="Advanced_Management"></a>ADVANCED MANAGEMENT
+      <br></h2>
+    <h3>
+      <a name="UIPublish_Control_Panel0"></a>UIPublish Control Panel</h3>
+    <p>The UIPublish Control Panel acts as a master control center and provides 
+    a wealth of information about all article and event sections.</p>
+  <p><a href="images/index.13.jpg">
+  <img border="1" src="images/index.13_small.jpg" xthumbnail-orig-image="images/index.13.jpg"></a></p>
+  <p>The Control Panel displays the numbers of items in each section including 
+  those items still in draft status, easily taking you to a list of draft items.&nbsp; 
+  The Control Panel also allows you to quickly edit recent posts.</p>
+  <h3>
+      <a name="Manage_Section0"></a>Manage Section
+      <br></h3>
+  <p>The Manage Section has several features to aid in finding items to edit or 
+  copy.</p>
+  <p><a href="images/index.14.jpg">
+  <img border="1" src="images/index.14_small.jpg" xthumbnail-orig-image="images/index.14.jpg"></a></p>
+  <p>There is a Search feature to help you find items which contain a specific 
+  word or phrase in their title, summary, or content.&nbsp; The Search filter 
+  may also be removed to display all the items in the section.</p>
+  <p>Most of the Columns can also be selected to sort both ascending and 
+  descending thereby grouping items.</p>
+  <p>The individual title can also be clicked to display the actual web page 
+  used to display that item.</p>
+  <h3><a name="Copy_Item"></a>Copy An Existing Item
+      <br></h3>
+  <p>Sometimes it's easier to use an existing item as a template for a new item.&nbsp; 
+  To do this find the item you want to use and &quot;Modify&quot; it.</p>
+  <p><a href="images/index.18.jpg">
+  <img border="1" src="images/index.18_small.jpg" xthumbnail-orig-image="images/index.18.jpg"></a></p>
+  <p>You notice a checkbox at the top of the page which allows you to create a 
+  copy instead of modifying this event.&nbsp; If you do NOT check this box, you 
+  will end up modifying the original event.</p>
+  <h3><a name="Convert_Item"></a>Copy An Event Item to an Article</h3>
+  <p>This feature allows you to use a new or existing event item and save it as 
+  a news item.&nbsp; It's particularly handy since many events require a news 
+  item after the event has occurred.&nbsp; In this case the event will no longer 
+  displayed, but the details of the event relate to the associated news item.</p>
+  <p><a href="images/index.20.jpg">
+  <img border="1" src="images/index.20_small.jpg" xthumbnail-orig-image="images/index.20.jpg"></a></p>
+  <p>To copy an event to an article, use the associated button at the bottom of 
+  the preview page.&nbsp; You must understand the event item will NOT be entered 
+  or updated using this option.&nbsp; It is best to only use this when modifying 
+  existing events.<br></p>
+  <h2><a name="Options"></a>Optional Features </h2>
+  <p>These are additional features that may be installed on your server.&nbsp; Please 
+  contact your webmaster for details.</p>
+  <h3><a name="WYSIWYG"></a>WYSIWYG Editor</h3>
+  <p>UIPublish can be set up to use <a href="http://www.fckeditor.net">FCKeditor</a> 
+  which allows editing the content entries as if using a traditional word 
+  processor.</p>
+  <h3><a name="Calendar"></a>Popup Calendar</h3>
+  <p>UIPublish can be set up to use <a href="http://www.calendarxp.net/">
+  PopCalendarXP</a> which allows a popup control for easily selecting dates and 
+  times.</p>
+  <h3><a name="Files"></a>Advanced File Management</h3>
+  <p>UIPublish can be set up to use <a href="http://kfm.verens.com/">Kae's File 
+  Manager</a> to upload and manage uploaded files and select files for 
+  Enclosures.&nbsp; It contains many advanced features which also allow image or 
+  picture manipulation and other advanced file management features.&nbsp; This 
+  option is typically installed as a plug-in for FCKeditor.</p>
+  <h3><a name="WebCalendar"></a>Web Calendar Integration</h3>
+  <p>UIPublish can be set up to post events to a
+  <a href="http://freshmeat.net/projects/web-calendar">Web Calendar</a><span style="color: #000000">, 
+  though this is an older application</span>.&nbsp; If installed and configured, 
+  this will appear as an option on the event preview screen.&nbsp; If selected, 
+  this item will be posted to the Web Calendar in addition to the UIPublish 
+  section.</p>
+  <h2>
+      <a name="Using_The_File_Manager"></a>Using The Built-IN File Manager
+      <br></h2>
+    <p>The built-in File Manager enables you to upload files to a particular directory. 
+    You can also delete uploaded files.<br>
+&nbsp;<br>
+      <a href="images/09.jpg">
+      <img src="images/09_small.jpg" title="File Manager" alt="" xthumbnail-orig-image="images/09.jpg" border="1"></a>
+      <br>
+    </p>
+    <p>To upload a file, choose the "<strong>Browse</strong>" button. A dialog box should show up. Use it to locate the file you want to upload. 
+      <br>
+      <a href="images/10.jpg">
+      <img src="images/10_small.jpg" title="Dialog box to choose file to upload" alt="" xthumbnail-orig-image="images/10.jpg" border="1"></a>
+      <br>
+    </p>
+    <p>The filename will show up in the box. Choose "<strong>Upload</strong>" to upload the file. Depending on the file size, this may take a few minutes. 
+      <br>
+      <a href="images/11.jpg">
+      <img src="images/11_small.jpg" title="Filename Selected" alt="" xthumbnail-orig-image="images/11.jpg" border="1"></a>
+      <br>
+    </p>
+    <p>
+      <a href="images/12.jpg">
+      <img src="images/12_small.jpg" title="File Manager showing uploaded file." alt="" xthumbnail-orig-image="images/12.jpg" border="1"></a>
+      <br>
+    </p>
+    <p>After the file has been uploaded it is listed in the File Manager along with its size and a link to delete the file. 
+      <em>Warning: If you click the "<strong>Delete</strong>" link the file will be deleted without asking for a confirmation.
+        </em>
+    </p>
+    <p>If you are having trouble uploading a file, check the file size of the file you are trying to upload. The File Manager is configured 
+    with a <strong>Max File Size</strong> limit. If the file size is larger than the limit it may not upload. Also, the File Manager has a limit on the total space used for uploaded files. If there is inadequate free space, the file may not upload. Ask your webmaster to increase the limits or delete files that are no longer needed.&nbsp;
+    </p><h2>
+      <a name="Description_of_Options"></a>Description of&nbsp; Options</h2><h3>
+      <a name="Article_Sections"></a>Article Sections</h3><h4>
+      <a name="Title"></a>Title</h4>
+    <p><b>Required</b>; the title of the item.
+    </p><h4>
+      <a name="Publish_Date"></a>Publish Date</h4>
+    <p><b>Required</b>; allows you to specify when the item, if approved, will be online or appear on the site.
+      <br>
+    </p><h4>
+      <a name="Expire_Date"></a>Expire Date</h4>
+    <p><i>Optional</i>; allows you to specify when the item will go offline.&nbsp; If left blank, item will remain online until deleted.
+      <br>
+    </p><h4>
+      <a name="Approval"></a>Post Status</h4>
+    <p><b>Required</b>; if set to Draft, item will not go online until it is reviewed and set to 
+    Publish.
+      <br>
+    </p><h4>
+      <a name="Visibility"></a>Front Page</h4>
+    <p><b>Required</b>; if set to Yes, item will appear on main page of website.
+    </p><h4>
+      <a name="Section"></a>Section</h4>
+    <p>Default; The section is set automatically when you add an item and you should not need to change it. However, if you need to you can move an item from one section to another you can using this menu.
+    </p><h4>
+      <a name="Topic"></a>Category</h4>
+    <p>Ask your webmaster how to use this feature. Otherwise just leave it blank.
+    </p><h4>
+      <a name="Summary"></a>Summary</h4>
+    <p><i>Optional</i>; a short description of the content, usually used as a 
+    teaser on the main page of the website.
+      <br>
+    </p><h4>
+      <a name="Content"></a>Content</h4>
+    <p><i>Optional</i>; the content of the item should be typed or pasted here. To start a new paragraph use the "Return" or "Enter" key on your keyboard. You can also use selected HTML tags. For allowed HTML tags see the "<strong>HTML</strong>" link adjacent to the content file or ask your webmaster.&nbsp; You can also add URLs in the content field and they will be automatically hyperlinked. However, a URL that appears at the start of a new line may not be hyperlinked. If you are having problems getting a URL to hyperlink, add a space before the URL. 
+      <br>
+    </p><h4>
+      <a name="Link_URL"></a>Link URL</h4>
+    <p><i>Optional</i>; if there is a related link to the item and you would 
+    rather have the user taken there <b><u>instead</u></b> of the content page, 
+    enter the Universal Resource Locator (URL or web address) here.
+      <br>
+    </p><h4>
+      <a name="Include_File"></a>Enclosure</h4>
+    <p><i>Optional</i>; to attach a file for use as a Podcast or appear as an 
+    attachment in a newsfeed, enter the URL or web address here. 
+      <br>
+    </p><h3>
+      <a name="Event_Sections"></a>Event Sections</h3>Most of the options for the event sections are the same as the article sections expect for 
+  Event Time(s) Date(s)
+    <br><h4>
+      <a name="Start_Time"></a>Start Time</h4>
+    <p> <i>Optional</i>; it sets the time the event begins.
+    </p>
+    <h4>
+      <a name="Event_Date"></a>Event Date</h4>
+    <p> <b>Required</b>; it sets the date of the event.</p><h4>
+      <a name="End_Time"></a>End Time</h4>
+    <p> <i>Optional</i>; it sets the time the event ends.
+    </p>
+  <h4>
+      <a name="End Date"></a>End Date</h4>
+    <p> <i>Optional, but Recommended</i>; it sets the date the event will end, 
+    meaning the event should no longer be listed as an upcoming event. If the date is in the future, then the item is active and listed on the website. If it is in the past , then the item may not be listed on the website or may be listed under the "Past Events" list if it has been setup by the webmaster. 
+    If this entry is blank, the event will remain active.</p>
+  <p> &nbsp;</p>
+    <hr style="width: 100%; height: 1px;" noshade="noshade">
+    <font size="-1">Last Modified: D. Leffler, February 5, 2008.
+    </font>
+    <br>
+    <p>
+      <br>
+    </p><h4></h4>
+  </body>
+</html>

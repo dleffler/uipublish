@@ -1,0 +1,434 @@
+# $Id: NOTES.txt,v 1.19 2003/09/22 14:35:32 chavan Exp $ 
+
+
+                           
+			     UIPublish
+
+			       NOTES
+
+* CHANGELOG 
+
+27 February 2008, version 1.1
+- Added embedded audio player option via stand-alone Audio Player 2.0 beta 
+- Fixed attached file pathname problem 
+
+27 February 2008, version 1.0.3
+- Added "paging" to event lists
+
+25 February 2008, version 1.0.2
+- Reformatted Item Editing/Entry Pages (again)
+
+13 February 2008, version 1.0.1
+- Reformatted Item Editing/Entry and Admin List Pages
+- Corrected a time conversion problem with Noon and Midnight
+
+5 February 2008, version 1.0.0
+- Reformatted Item Editing/Entry Pages
+- Added 'Preview Section' to admin screens
+
+26 January 2008, version 0.9.1
+- Added option to display additional article items at end of list in a compact title-only style as an 'older news' type function.
+  -- Allows displaying more items, yet takes up less space on a front page
+- Changed function of "links" entries; they now are used in place of bringing up the item content page 
+- Cleaned up long lists pagination so it now actually works
+- Added "file checking" when previewing enclosure entries to flag potential problems
+- Corrected some lingering quirks and added additional backend navigation features including actual item preview
+- Adjusted format of entry/edit pages to be more logical/intuitive
+
+
+24 January 2008, version 0.9.0
+- Main Control Panel now shows much more detail
+  -- Better navigation
+  -- Displays details about sections
+  -- Displays "most recent" entries
+  -- Allows better managing of drafts
+  -- A better "master control center"
+- Allows searching/filtering and sorting entry lists
+- Cleaned-up up and added Categories to the RSS feed code
+
+
+1 January 2008,  version 0.8.3
+- Modified UIPublish to allow converting an "event" to "news"
+
+
+24 May 2007, version 0.8.2
+- Further modified UIPublish to enhance Pod-casting 
+- Integrated Kae's File Manager (kfm.verens.com)
+
+
+29 January 2007
+- Modified UIPublish to initially allow Pod-casting...
+
+
+27 January 2007
+- Added Greybox (orangoo.com/labs/GreyBox) to pop-up events, news, articles, etc...
+
+
+23 January 2007, v 0.8.1
+- Corrected a minor glitch in UIPublish fixing some date related problems
+
+
+9 January 2007, v 0.8
+- Added optional event start and end times, with the start times displayed in entries
+- Added option to also post event to WebCal calendar (freshmeat.net/projects/web-calendar) 
+which saves a lot of entry duplication
+
+
+18 October 2006
+- Make it easier to manage and maintain entries (display item topic and copy entries)
+- Display event ending dates, even in the RSS feed (and better handling of event end dates)
+
+
+26 June 2006
+- Modified UIPublish to use topics/categories.  
+
+
+19 January 2006
+- Grafted FCKeditor (fckeditor.net) into UIPublish to allow easy editing of HTML items.
+
+
+10 January 2006
+- modified  scripts quite a bit at this point to make the RSS feeds and editing 
+do exactly what I want!
+- Integrated PopCalendarXP (calendarxp.net) to for date picking.
+
+
+** REL: 0.7.1     DATE 2003_09_22
+
+- Fixed bug #810627 (Control Panel: Incorrect Status)
+
+- Fixed bug #810633 (Removed debugging code in RSS file)
+
+- In uipublish_admin/inc/config.php set default topics 
+  to "none" 
+
+
+** REL: 0.7       DATE 2003_08_03
+
+- Updated documentation
+
+
+** REL: 0.7b3     DATE 2003_06_25
+
+- Fixed bug #755702 (Automatic recognition of URLs)
+
+- Fixed bug #742093 (Control Panel: Topic ID displayed)
+
+- Fixed bug #756980 (Control Panel: Cannot Set Expire Date)
+
+- RSS: Formatted date in RFC822 format needed for valid RSS
+  (For both article and events)
+
+- RSS: Added configuration setting for RSS items limit.
+  (For both article and events)
+
+- RSS: Ordered RSS items by descending order of post-date 
+  (For articles)
+
+- Added automatic recognition of URLs for event items.
+
+
+** REL: 0.7b2     DATE 2003_05_21
+
+- New user documentation (help)
+
+- File Manager file names linked to online file
+
+- Minor updates control panel
+
+- Removed unnecessary section id from page navigator links on
+  /website/index.php
+
+- Updated installation and configuration notes.
+
+
+** REL: 0.7b1     DATE 2003_04_15
+
+Summary of major new features since 0.3.4:
+
+- Page navigator for displaying long list of items across 
+  multiple pages. (Feature Request ID 455465)
+
+- Javascript syndication for articles and events sections
+
+- RSS 0.91 syndication for articles and events sections
+
+- New look for control panel (admin) interface.
+
+- FileManager added to control panel to upload "include" files.
+
+- Page navigator for displaying long list of items across 
+  multiple pages in contol panel. 
+
+- Added support for "Topics" (Database and control panel 
+  only -- front end to be developed.)
+
+- Updated installation and configuration notes.
+
+
+** REL: 0.7a1     DATE 2003_04_14
+ 
+- Updated File List in NOTES.txt
+
+- New look for control panel (admin) interface.
+
+- Removed obsolete files.
+
+- Renamed website/uipublish_section/list.php to index.php
+
+- Renamed website/uical_section/list.php to index.php
+
+- Added Javascript Syndication to articles and events
+
+- Added page navigator for uipublish_section items list
+
+- Replaced <b> with <strong> in lists.
+
+
+** REL: 0.6a1     DATE 2003_03_30
+
+- Added page navigator for item list in control panel
+  
+
+** REL: 0.5a2     DATE 2003_03_05 
+
+- Removed add.gif, modify.gif, and delete.gif 
+
+- Replaced references to those graphics with text links
+
+- Modified stylesheet (/inc/style.css)
+
+
+** REL: 0.5a1     DATE 2003_03_03
+
+- Removed code related to magic_quotes_gpc from:
+  /uipublish_admin/apply.php
+  /uipublish_admin/apply_cal.php
+  /uipublish_admin/inc/config.php
+
+
+** REL: 0.4a2     DATE: 2002_12_30
+
+- New feature: Filemanager uploads files to upload directory.
+
+  To upgrade add the following file:
+  /uipublish_admin/filemanager.php
+
+- New feature: RSS feed
+ 
+  To upgrade add the following files
+  /website/uipublish_section/rss.php
+  /website/uical_section/rss.php
+
+- SQL file uipublish.sql updated with new topics columns. 
+  (If upgrading from older version run uipublish_addtopics.sql)
+
+  Also updated this file:
+  /docs/NOTES.txt
+
+
+** REL: 0.4a1     DATE: 2002_12_19 
+
+- New feature "Topics" 
+  (For uipublish_admin only, front-end to be develoed)
+
+  To upgrade apply patch and run included SQL file. 
+
+  The following files have been modified.
+ 
+  /uipublish_admin/preview.php
+  /uipublish_admin/inc/config.php
+  /uipublish_admin/apply.php
+  /uipublish_admin/mod.php
+  /uipublish_admin/add.php
+  /uipublish_admin/preview_cal.php
+  /uipublish_admin/add_cal.php
+  /uipublish_admin/mod_cal.php
+  /uipublish_admin/inc/common.php
+  /uipublish_admin/apply_cal.php
+  /docs/NOTES.txt
+  /docs/uipublish_addtopics.sql (New)
+
+
+** REL: 0.3.4    DATE: 2002_07_17
+
+- Fixed bug [583183] Calendar section -- incorrect section ID
+
+  To upgrade from Ver. 0.3.3  replace file 
+  /website/uical_section/list-inc.php 
+  with new version included in this package.
+
+
+** REL: 0.3.3    DATE: 2002_03_27
+
+- Fixed bug [469491] Content in "modify events" changes.
+- Added "Selected HTML allowed" link to add/modify pages in uipublish_admin.
+- Added a page for displaying allowed HTML tags to user.
+- Updated documentation in /docs/
+- Removed CVS "Release" info at top of files.
+
+A quick way to upgrade from 0.3.2 to 0.3.3 would be to copy all the
+0.3.3 files under /uipublish_admin/ directory into your 0.3.2
+installation, except "/uipublish_admin/inc/config.php". Of course, you
+shouldn't do this if you have made any changes to the 0.3.2 code
+yourself. In any case, make a backup of all your installed files
+before you try to upgrade.
+
+
+** REL: 0.3.2    DATE: 2001_09_16
+
+- Fixed bug in "Select Section" on "Add Event" admin page. 
+- Fixed bug in HTML filter; HTML tag attributes now working.
+
+
+** REL: 0.3.1    DATE: 2001_07_31
+
+- Added a display (list) of past events
+- Modified global variable names to prevent confusion
+- Moved configuration variables from global.php to config.php
+- Fixed 'BR tag' and other related bugs (see below).
+- Expanded and updated documentation
+
+The BR tag was caused by multiple <BR> tags being added to the content
+field. Newlines are no longer being converted to BR tags to be stored 
+in the database. Newlines are converted to BR tags only for display.
+
+
+** REL: 0.3.0    DATE: 2001_07_24
+
+- Placed under the General Public License (GPL)
+- Added feature to publish "event" items
+- Added MySQL table "UIPublish_cal" to store "event" items
+
+The User Guide has not been updated to reflect the addition of event
+items.
+
+
+** REL: 0.2.5
+
+- Item content allows selected HTML tags. 
+  The following tags are allowed: 
+  a|b|br|em|h\d|i|img|p|strong|table|td|th|tr|ul|ol|li
+
+HTML filter function is not working completely; the "img" tag does
+not pass through the filter.
+
+  
+** REL: 0.2.0
+
+- Items can be listed in separate "sections"
+- Settings for "magic_quotes_gpc" 
+- Expanded documentation
+
+
+** REL: 0.1.x
+
+- First working version
+- Publishes Article items
+- Adds item
+- Modifies (Edit) item
+- Deletes item
+- Schedules item for publishing
+- Allows expire date for item
+- Items can be weighted (normal, important, etc.)
+
+
+
+* FILE LIST - Updated: 2003_04_15, revised 29 January 2008
+
+Here is a list of UIpublish files along with some comments. 
+
+uipublish
+|
+|-- docs                        # DOCUMENTATION
+|   |-- INSTALL.txt             # Installation instructions
+|   |-- LICENSE.txt             # License
+|   |-- NOTES.txt		# Changelog and notes
+|   |-- README.txt		# Readme
+|   |-- uipublish.sql		# SQL to create MySQL Table
+|   |-- uipublish_addtopics.sql # SQL to upgrade for "topics"
+|   `-- uipublish_upgrade080.sql # SQL to upgrade for "time"
+|
+|-- uipublish_admin             # ADMINISTRATION (CONTROL PANEL)
+|   |-- add.php			# Form to add an article item
+|   |-- add_cal.php		# Form to add an event item
+|   |-- apply.php		# Run SQL to add/delete an article item
+|   |-- apply_cal.php		# Run SQL to add/delete an event item
+|   |-- confirm.php		# Confirm before deleting article item
+|   |-- confirm_cal.php		# Confirm before deleting event item
+|   |-- del.php			# Form to delete an article item
+|   |-- del_cal.php		# Form to delete an event item
+|   |-- File.gif  		# Filemanager
+|   |-- filemanager.php		# Filemanager for uploads
+|   |-- Folder.gif		# Filemanager
+|   |-- Folderup.gif	# Filemanager
+|   |
+|   |-- help			# USERS GUIDE (HELP FILES) DIRECTORY
+|   |   `-- images	        # Sample screen images for help file
+|   |
+|   |-- inc                     # INCLUDE FILES FOR ADMIN 
+|   |   |-- bot.php             # Footer for admin pages
+|   |   |-- calbtn.gif
+|   |   |-- common.php		# Common Functions
+|   |   |-- config.php		# Configuration settings
+|   |   |-- connect_db.php	# Database connection function
+|   |   |-- display_err.php	# Display error message
+|   |   |-- format_date.php	# Date formatting functions
+|   |   |-- globals.php		# Global varianbles for admin
+|   |   |-- index.html		# Prevent access to dir listing
+|   |   |-- style.css           # Stylesheet
+|   |   |-- time.php	# Convert time zones
+|   |   |-- top.php		# Header for admin pages
+|   |   |-- uilogo.gif
+|   |   |-- uipublish.gif
+|   |   `-- version.php	        # Version info and customization notes
+|   |
+|   |-- index.php               # Main page, lists sections
+|   |-- list.php                # Shows lists of article items
+|   |-- list_cal.php		# Shows lists of event items
+|   |-- mod.php			# Form to modify existing article item
+|   |-- mod_cal.php		# Form to modify existing event item
+|   |-- preview.php		# Preview data from add & mod
+|   `-- preview_cal.php		# Preview data from add & mod
+|
+`-- website                     # WEBSITE FILES
+    |
+    |-- inc                     # WEBSITE INCLUDES
+    |   |-- common.php		# Common functions
+    |   |-- config.php		# Configuration variables
+    |   |-- connect_db.php	# Database connnection function
+    |   |-- display_err.php	# Display error message
+    |   |-- format_date.php	# Date formatting functions
+    |   |-- globals.php		# Global variables
+    |   |-- index.html		# Prevent access to dir listing
+    |   `-- mime.php 		  # select mime type for enclosures if using php4
+    |
+    |-- mainlist-inc.php	# Main list include (example)
+    |-- mainlist.php		# Main list / index page (example)
+    |
+    |-- uical_section		# A SAMPLE EVENT SECTION
+    |   |-- index.php     # List page
+    |   |-- item-inc.php	# Item include
+    |   |-- item.php   	  # Item page
+    |   |-- item1.php  	  # Item page for RSS  
+    |   |-- js.php		# Javascript syndication file
+    |   |-- list-inc.php	# List include
+    |   |-- pastevents.php   # List page for past events   
+    |   |-- rss.php		# RSS syndication file
+    |   `-- section_id.php	# Config file for setting Section ID
+    |
+    |-- uipublish_files         # UPLOADED FILES FOR ITEMS
+    |   `-- readme.txt		# 
+    |
+    `-- uipublish_section       # A SAMPLE ARTICLE SECTION
+        |-- index.php   # List page
+        |-- item-inc.php	# Item include
+        |-- item.php   	  # Item page
+        |-- item1.php  	  # Item page for RSS        
+        |-- js.php		# Javascript syndication file
+        |-- list-inc.php	# List include
+        |-- rss.php		# RSS syndication file
+        `-- section_id.php	# Config file for setting Section ID
+
+
+
